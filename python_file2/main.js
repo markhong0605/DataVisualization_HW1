@@ -1,84 +1,118 @@
-let myGraph = document.getElementById('myGraph');
+let lineGraph1 = document.getElementById('lineGraph1');
 
-let trace1 ={};
-trace1.mode ="lines+markers+text";
-trace1.type ="scatter";
-trace1.name = "Team A";
-trace1.marker = {
-    size : 20
+let trace11 ={};
+trace11.mode ="lines+markers+text";
+trace11.type ="scatter";
+trace11.name = "GS Warriors";
+trace11.marker = {
+    size : 15
 };
-trace1.x =[];
-trace1.y =[];
-trace1.text = [];
-trace1.textposition = " bottom center";
-trace1.textfont = {
+trace11.x =[];
+trace11.y =[];
+trace11.text = [];
+trace11.textposition = "center";
+trace11.textfont = {
     family : "Raleway",
-    size : 10
+    size : 15
 };
 
 for(let i=0;i<set1.length;i++){
-    trace1.x[i] =set1[i][0];
-    trace1.y[i] =set1[i][1];
-    trace1.text[i] = set1[i][2];
+    trace11.x[i] =set1[i][0];
+    trace11.y[i] =set1[i][1];
+    trace11.text[i] = set1[i][2];
 }
 
-let trace2 = {};
-trace2.mode = "lines+markers+text";
-trace2.type = "scatter";
-trace2.name = "Team B";
-trace2.marker = {
-    size : 30
+let trace22 = {};
+trace22.mode = "lines+markers+text";
+trace22.type = "scatter";
+trace22.name = "LA Lakers";
+trace22.marker = {
+    size : 15
 };
-trace2.x = [];
-trace2.y = [];
-trace2.text = [];
-trace2.textposition = "center"
-trace2.textfont = {
+trace22.x = [];
+trace22.y = [];
+trace22.text = [];
+trace22.textposition = "center"
+trace22.textfont = {
     family : "Raleway, sans_serif",
-    size : 10
+    size : 15
 };
 
 for(let i=0;i<set2.length;i++){
-    trace2.x[i] =set2[i][0];
-    trace2.y[i] =set2[i][1];
-    trace2.text[i] = set2[i][2];
+    trace22.x[i] =set2[i][0];
+    trace22.y[i] =set2[i][1];
+    trace22.text[i] = set2[i][2];
 }
 
-let trace3 = {};
-trace3.mode = "lines+markers+text";
-trace3.type = "scatter";
-trace3.name = "Team C";
-trace3.marker = {
-    size : 10
+let trace33 = {};
+trace33.mode = "lines+markers+text";
+trace33.type = "scatter";
+trace33.name = "LA Clippers";
+trace33.marker = {
+    size : 15
 };
-trace3.x = [];
-trace3.y = [];
-trace3.text = [];
-trace3.textposition = "top center";
+trace33.x = [];
+trace33.y = [];
+trace33.text = [];
+trace33.textposition = "center";
+trace33.textfont = {
+    family : "Raleway, sans_serif",
+    size : 15
+};
 
 for(let i=0;i<set3.length;i++){
-    trace3.x[i] =set3[i][0];
-    trace3.y[i] =set3[i][1];
-    trace3.text[i] = set3[i][2];
+    trace33.x[i] =set3[i][0];
+    trace33.y[i] =set3[i][1];
+    trace33.text[i] = set3[i][2];
 }
 
-let data =[];
-data.push(trace1);
-data.push(trace2);
-data.push(trace3);
+let data1 =[];
+data1.push(trace11);
+data1.push(trace22);
+data1.push(trace33);
 
-let layout ={
+let layout1 ={
     margin:{
         t:50
     },
     xaxis : {
-        range : [0,6]
+       range : [0,6.5]
     },
     yaxis : {
-        range : [0,25]
+        range : [0,50]
     },
-    title : 'Scatter & Line'
+    updatemenus:[
+        {
+            y:0.6,
+            x:1.3,
+    
+            yanchor: 'top',
+            buttons:[
+                {
+                    method: 'restyle',
+                    args:['visible', [true, false, false]],
+                    label: "GS Warriors"
+                },
+                {
+                    method: 'restyle',
+                    args:['visible', [false, true, false]],
+                    label: "LA Lakers"
+                },
+                {
+                    method: 'restyle',
+                    args:['visible', [false, false, true]],
+                    label: "LA Clippers"
+                },
+                {
+                    method: 'restyle',
+                    args:['visible', [true, true, true]],
+                    label: "Display All"
+                },
+            ]
+        }
+    ],
+    title : 'NBA starting lineups scoring points per game(due to 11/14 00:00 UTF +8)'
 };
 
-Plotly.newPlot(myGraph, data, layout);
+Plotly.newPlot(lineGraph1, data1, layout1);
 
