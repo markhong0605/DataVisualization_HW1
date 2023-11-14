@@ -1,29 +1,75 @@
-let animals_Taipei_zoo = [
+let north = [
     {
-        "name" : "lion",
-        "count" : 20
+        "name" : "2009上半年",
+        "count" : 56
     },
     {
-        "name" : "tiger",
-        "count" : 14
+        "name" : "2009下半年",
+        "count" : 60
     },
     {
-        "name" : "monkey",
-        "count" : 23
+        "name" : "2010上半年",
+        "count" : 52
+    },
+    {
+        "name" : "2010下半年",
+        "count" : 50
     }
 ];
 
-let animals_Taoyuan_zoo = [
+let south = [
     {
-        "name" : "lion",
-        "count" : 12
+        "name" : "2009上半年",
+        "count" : 54
     },
     {
-        "name" : "tiger",
-        "count" : 18
+        "name" : "2009下半年",
+        "count" : 59
     },
     {
-        "name" : "monkey",
-        "count" : 29
+        "name" : "2010上半年",
+        "count" : 52
+    },
+    {
+        "name" : "2010下半年",
+        "count" : 49
+    }
+];
+
+let mid = [
+    {
+        "name" : "2009上半年",
+        "count" : 54
+    },
+    {
+        "name" : "2009下半年",
+        "count" : 60
+    },
+    {
+        "name" : "2010上半年",
+        "count" : 52
+    },
+    {
+        "name" : "2010下半年",
+        "count" : 50
+    }
+];
+
+let east = [
+    {
+        "name" : "2009上半年",
+        "count" : 56
+    },
+    {
+        "name" : "2009下半年",
+        "count" : 60
+    },
+    {
+        "name" : "2010上半年",
+        "count" : 54
+    },
+    {
+        "name" : "2010下半年",
+        "count" : 51
     }
 ];

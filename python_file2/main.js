@@ -10,7 +10,7 @@ trace11.marker = {
 trace11.x =[];
 trace11.y =[];
 trace11.text = [];
-trace11.textposition = "center";
+trace11.textposition = "top center";
 trace11.textfont = {
     family : "Raleway",
     size : 15
@@ -32,7 +32,7 @@ trace22.marker = {
 trace22.x = [];
 trace22.y = [];
 trace22.text = [];
-trace22.textposition = "center"
+trace22.textposition = "top center"
 trace22.textfont = {
     family : "Raleway, sans_serif",
     size : 15
@@ -54,7 +54,7 @@ trace33.marker = {
 trace33.x = [];
 trace33.y = [];
 trace33.text = [];
-trace33.textposition = "center";
+trace33.textposition = "top center";
 trace33.textfont = {
     family : "Raleway, sans_serif",
     size : 15
@@ -72,6 +72,7 @@ data1.push(trace22);
 data1.push(trace33);
 
 let layout1 ={
+    
     margin:{
         t:50
     },

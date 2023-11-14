@@ -27,9 +27,11 @@ let data = [];
 data.push(trace5);
 
 let layout = {
+    width : 700,
+    height : 400,
     margin : {
-        t : 80,
-        l :30
+        t : 30,
+        l :50
     },
 
     title : "111年死因統計概況"
